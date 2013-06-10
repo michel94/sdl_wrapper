@@ -13,7 +13,6 @@ void Wrapper::set_pixel(SDL_Surface *screen, int x, int y, Uint8 color)
   *p = color;
 }
 
-
 void Wrapper::clear_screen(SDL_Surface *screen, int r, int g, int b)
 {
   /* Clears the screen by drawing a rectangle with color R,G,B on it */
