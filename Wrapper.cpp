@@ -21,7 +21,6 @@ void Wrapper::clear_screen(SDL_Surface *screen, int r, int g, int b)
   SDL_FillRect(screen, NULL, background_color);
 }
 
-
 void Wrapper::draw_line(SDL_Surface *screen, int x1, int y1, int x2, int y2, Uint8 color)
 {
   /* Draw a line from (x1, y1) to (x2, y2) */
