@@ -1,4 +1,4 @@
-sdl-wrapper
+SDL Wrapper
 ===========
 
-A simple C++ wrapper for SDL that simplify rendering
+A simple C++ wrapper for SDL that simplifies rendering. Licensed under the MIT License.
