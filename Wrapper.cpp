@@ -20,7 +20,7 @@ void Wrapper::clear_screen(SDL_Surface *screen, int r, int g, int b)
   SDL_FillRect(screen, NULL, background_color);
 }
 
-SDL_Surface* Wrapper::load_image (char path[500])
+SDL_Surface* Wrapper::load_image(char path[500])
 {
   SDL_RWops *tile_test_rwops = SDL_RWFromFile(path, "rb");
   return IMG_LoadPNG_RW(tile_test_rwops);
