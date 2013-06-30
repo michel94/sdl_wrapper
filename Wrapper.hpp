@@ -2,6 +2,7 @@
 #define WRAPPER_HPP
 
 #include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ class Wrapper
     //SDL_Surface *screen;
     
   public:
-    SDL_Surface *screen;
+    SDL_Surface static *screen;
 
     static void set_screen(SDL_Surface *_screen);
     static void set_pixel(int x, int y, Uint8 color);

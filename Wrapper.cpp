@@ -70,7 +70,7 @@ void Wrapper::draw_line(int x1, int y1, int x2, int y2, Uint8 color)
   dy <<= 1;
   dx <<= 1;
 
-  set_pixel(screen, x1, y1, color); /* Draw first pixel */
+  set_pixel(x1, y1, color); /* Draw first pixel */
 
   if (dx > dy)
   {
@@ -86,7 +86,7 @@ void Wrapper::draw_line(int x1, int y1, int x2, int y2, Uint8 color)
 
       x1 += stepx;
       fraction += dy;
-      set_pixel(screen, x1, y1, color);
+      set_pixel(x1, y1, color);
     }
   }
   else
@@ -103,7 +103,7 @@ void Wrapper::draw_line(int x1, int y1, int x2, int y2, Uint8 color)
 
       y1 += stepy;
       fraction += dx;
-      set_pixel(screen, x1, y1, color);
+      set_pixel(x1, y1, color);
     }
   }
 }
