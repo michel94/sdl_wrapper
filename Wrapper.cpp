@@ -20,6 +20,18 @@ void Wrapper::clear_screen(SDL_Surface *screen, int r, int g, int b)
   SDL_FillRect(screen, NULL, background_color);
 }
 
+SDL_Surface* Wrapper::load_image(char path[500])
+{
+  SDL_RWops *tile_test_rwops = SDL_RWFromFile(path, "rb");
+  return IMG_LoadPNG_RW(tile_test_rwops);
+}
+
+void Wrapper::draw_image(SDL_Surface *screen, SDL_Surface *img, int x, int y, int width, int height)
+{
+  SDL_Rect tile = {x, y, width, height};
+  SDL_BlitSurface(img, NULL, screen, &tile);
+}
+
 void Wrapper::draw_line(SDL_Surface *screen, int x1, int y1, int x2, int y2, Uint8 color)
 {
   /* Draw a line from (x1, y1) to (x2, y2) */
