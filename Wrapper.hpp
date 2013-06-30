@@ -9,13 +9,13 @@ using namespace std;
 class Wrapper
 {
   private:
-    //SDL_Surface *screen;
-    
+
   public:
     SDL_Surface static *screen;
 
     static void set_screen(SDL_Surface *_screen);
     static void set_pixel(int x, int y, Uint8 color);
+    static void flip_screen();
     static void clear_screen(int r, int g, int b);
     static SDL_Surface* load_image(char path[500]);
     static void draw_image(SDL_Surface *img, int x, int y, int width, int height);

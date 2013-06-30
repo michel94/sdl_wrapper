@@ -20,6 +20,11 @@ void Wrapper::set_pixel(int x, int y, Uint8 color)
   *p = color;
 }
 
+void Wrapper::flip_screen()
+{
+  SDL_Flip(screen);
+}
+
 void Wrapper::clear_screen(int r, int g, int b)
 {
   /* Clears the screen by drawing a rectangle with color R,G,B on it */

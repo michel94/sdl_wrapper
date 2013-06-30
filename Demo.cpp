@@ -24,7 +24,7 @@ void Demo::run()
 
     Wrapper::draw_line(250, 0, 250, 600, 0xFF); // Draw a test line
 
-    SDL_Flip(screen);
+    Wrapper::flip_screen();
     Wrapper::clear_screen(0, 0, 0);
   }
 }
