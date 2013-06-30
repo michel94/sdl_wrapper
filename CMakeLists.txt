@@ -6,7 +6,7 @@ find_package (SDL_image REQUIRED)
 
 link_libraries (
   ${SDL_LIBRARY}
-  #${SDLIMAGE_LIBRAR}
+  ${SDLIMAGE_LIBRARY}
   SDLmain
 )
 

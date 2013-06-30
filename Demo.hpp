@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Game
+class Demo
 {
   private:
     bool running;
@@ -16,8 +16,6 @@ class Game
     SDL_Surface *screen;
 
   public:
-    State *current_state;
-
     void setup();
     void run();
 };
