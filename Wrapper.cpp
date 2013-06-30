@@ -5,7 +5,14 @@
 
 #include "Wrapper.hpp"
 
-void Wrapper::set_pixel(SDL_Surface *screen, int x, int y, Uint8 color)
+SDL_Surface* Wrapper::screen;
+
+void Wrapper::set_screen(SDL_Surface *_screen)
+{
+  screen = _screen;
+}
+
+void Wrapper::set_pixel(int x, int y, Uint8 color)
 {
   /* Draws a pixel on the screen at (x, y) with color 'color' */
   Uint8 *p;
@@ -13,7 +20,7 @@ void Wrapper::set_pixel(SDL_Surface *screen, int x, int y, Uint8 color)
   *p = color;
 }
 
-void Wrapper::clear_screen(SDL_Surface *screen, int r, int g, int b)
+void Wrapper::clear_screen(int r, int g, int b)
 {
   /* Clears the screen by drawing a rectangle with color R,G,B on it */
   Uint8 background_color = SDL_MapRGB(screen->format, r, g, b);
@@ -26,13 +33,13 @@ SDL_Surface* Wrapper::load_image(char path[500])
   return IMG_LoadPNG_RW(tile_test_rwops);
 }
 
-void Wrapper::draw_image(SDL_Surface *screen, SDL_Surface *img, int x, int y, int width, int height)
+void Wrapper::draw_image(SDL_Surface *img, int x, int y, int width, int height)
 {
   SDL_Rect tile = {x, y, width, height};
   SDL_BlitSurface(img, NULL, screen, &tile);
 }
 
-void Wrapper::draw_line(SDL_Surface *screen, int x1, int y1, int x2, int y2, Uint8 color)
+void Wrapper::draw_line(int x1, int y1, int x2, int y2, Uint8 color)
 {
   /* Draw a line from (x1, y1) to (x2, y2) */
   int dy = y2 - y1;
