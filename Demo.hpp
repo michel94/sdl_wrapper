@@ -6,7 +6,7 @@
 #include "Wrapper.hpp"
 
 using namespace std;
-using namespace SDLWrapper;
+using namespace sdl_wrapper;
 
 class Demo
 {

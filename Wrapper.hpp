@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace SDLWrapper
+namespace sdl_wrapper
 {
   class Wrapper
   {
