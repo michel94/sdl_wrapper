@@ -5,6 +5,8 @@
 
 #include "Wrapper.hpp"
 
+using namespace SDLWrapper;
+
 SDL_Surface* Wrapper::screen;
 
 void Wrapper::set_screen(SDL_Surface *_screen)
