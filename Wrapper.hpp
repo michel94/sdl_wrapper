@@ -17,6 +17,7 @@ namespace sdl_wrapper
 
       static void set_screen(SDL_Surface *_screen);
       static void set_pixel(int x, int y, Uint8 color);
+      static Uint32 get_pixel(int x, int y, SDL_Surface *surface);
       static void flip_screen();
       static void clear_screen(int r, int g, int b);
       static SDL_Surface* load_image(char path[500]);
