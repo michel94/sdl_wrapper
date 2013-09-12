@@ -22,11 +22,11 @@ void Wrapper::set_pixel(int x, int y, Uint8 color)
   *p = color;
 }
 
-Uint32 Wrapper::get_pixel(int x, int y, SDL_Surface *surface)
+Uint32 Wrapper::get_pixel(SDL_Surface *surface, int x, int y)
 {
   /* Returns the pixel at (x, y) from a surface 'surface'*/ 
-  Uint32 *pixels = (Uint32 *)surface->pixels;
-  return pixels[ ( y * surface->w ) + x ];
+  Uint32 *pixels = (Uint32*) surface->pixels;
+  return pixels[(y * surface->w) + x];
 }
 
 void Wrapper::flip_screen()
